@@ -173,7 +173,7 @@ if "1" in dataset_choice:
     
     # Chargement des données
     try:
-        X_train, y_train = load_data("/home/sitraka/Python_data/Projet_09_03_26/ex2data1.txt")
+        X_train, y_train = load_data("./data//ex2data1.txt")
     except Exception as e:
         st.error(f"Erreur lors du chargement des données. Veuillez vérifier le chemin du fichier. Détails: {e}")
         st.stop()
@@ -261,7 +261,7 @@ else:
     lambda_ = st.sidebar.slider("Paramètre de Régularisation (Lambda)", min_value=0.0, max_value=10.0, value=0.01, step=0.01)
     
     try:
-        X_train, y_train = load_data("/home/sitraka/Python_data/Projet_09_03_26/ex2data2.txt")
+        X_train, y_train = load_data("./data//ex2data2.txt")
     except Exception as e:
         st.error(f"Erreur lors du chargement des données. Détails: {e}")
         st.stop()
